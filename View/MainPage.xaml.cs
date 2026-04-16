@@ -1,8 +1,8 @@
 namespace PawsitivePlace.View;
 
-public partial class TestPage : ContentPage
+public partial class MainPage : ContentPage
 {
-	public TestPage()
+	public MainPage()
 	{
 		InitializeComponent();
 	}
