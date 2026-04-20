@@ -6,5 +6,6 @@ namespace PawsitivePlace.Model.Temp
 {
     internal class HunterBrown
     {
+
     }
 }
