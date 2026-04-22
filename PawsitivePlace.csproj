@@ -66,12 +66,6 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Compile Remove="Views\**" />
-	  <EmbeddedResource Remove="Views\**" />
-	  <None Remove="Views\**" />
-	</ItemGroup>
-
-	<ItemGroup>
 		<PackageReference Include="Microsoft.Maui.Controls" Version="8.0.1" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.100" />
 	</ItemGroup>
@@ -80,6 +74,9 @@
 	  <Folder Include="ViewModel\AdoptionViewModels\" />
 	  <Folder Include="ViewModel\AnimalsViewModel\" />
 	  <Folder Include="ViewModel\StartViewModels\" />
+	  <Folder Include="Views\AdoptionPages\" />
+	  <Folder Include="Views\AnimalsPages\" />
+	  <Folder Include="Views\StartPages\" />
 	</ItemGroup>
 
 	<ItemGroup>

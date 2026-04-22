@@ -1,15 +1,10 @@
-namespace PawsitivePlace.Model;
-
-public class TitleMain : ContentPage
+namespace PawsitivePlace.Model
 {
-	public TitleMain()
-	{
-		Content = new VerticalStackLayout
-		{
-			Children = {
-				new Label { HorizontalOptions = LayoutOptions.Center, VerticalOptions = LayoutOptions.Center, Text = "Welcome to .NET MAUI!"
-				}
-			}
-		};
-	}
+    public class TitleMain
+    {
+        public TitleMain()
+        {
+
+        }
+    }
 }
