@@ -66,17 +66,23 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Microsoft.Maui.Controls" Version="8.0.1" />
-		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.100" />
+	  <Compile Remove="ViewModel\AdoptionViewModels\**" />
+	  <Compile Remove="ViewModel\AnimalsViewModel\**" />
+	  <Compile Remove="ViewModel\StartViewModels\**" />
+	  <Compile Remove="Views\**" />
+	  <EmbeddedResource Remove="ViewModel\AdoptionViewModels\**" />
+	  <EmbeddedResource Remove="ViewModel\AnimalsViewModel\**" />
+	  <EmbeddedResource Remove="ViewModel\StartViewModels\**" />
+	  <EmbeddedResource Remove="Views\**" />
+	  <None Remove="ViewModel\AdoptionViewModels\**" />
+	  <None Remove="ViewModel\AnimalsViewModel\**" />
+	  <None Remove="ViewModel\StartViewModels\**" />
+	  <None Remove="Views\**" />
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Folder Include="ViewModel\AdoptionViewModels\" />
-	  <Folder Include="ViewModel\AnimalsViewModel\" />
-	  <Folder Include="ViewModel\StartViewModels\" />
-	  <Folder Include="Views\AdoptionPages\" />
-	  <Folder Include="Views\AnimalsPages\" />
-	  <Folder Include="Views\StartPages\" />
+		<PackageReference Include="Microsoft.Maui.Controls" Version="8.0.1" />
+		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.100" />
 	</ItemGroup>
 
 	<ItemGroup>
