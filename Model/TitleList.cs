@@ -1,9 +1,10 @@
-namespace PawsitivePlace.Model;
-
-public class TitleList : ContentPage
+namespace PawsitivePlace.Model
 {
-	public TitleList()
+	public class TitleList
 	{
-		
+		public TitleList()
+		{
+
+		}
 	}
 }
