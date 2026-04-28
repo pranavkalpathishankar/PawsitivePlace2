@@ -7,14 +7,16 @@ namespace PawsitivePlace
         public AppShell()
         {
             InitializeComponent();
-            RegisterRoutes();
+            //RegisterRoutes();
         }
 
+        /*
         private void RegisterRoutes()
         {
             // Layouts
             Routing.RegisterRoute(nameof(MainPage), typeof(MainPage));
 
         }
+        */
     }
 }
