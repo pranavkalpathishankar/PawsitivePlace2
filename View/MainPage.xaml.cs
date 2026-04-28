@@ -1,9 +1,12 @@
-namespace PawsitivePlace.View;
+using PawsitivePlace.ViewModel;
 
-public partial class MainPage : ContentPage
-{
-    public MainPage()
+namespace PawsitivePlace.View
+{ 
+    public partial class MainPage
     {
-        InitializeComponent();
+        public MainPage()
+        {
+            InitializeComponent();
+        }
     }
 }
