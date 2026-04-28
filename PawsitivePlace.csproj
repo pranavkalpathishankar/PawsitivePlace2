@@ -81,15 +81,6 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="10.0.0" />
-	</ItemGroup>
-
-	<!-- Ensure ResourceDictionary XAML in Resources\Styles are included as MauiXaml so they are available at runtime -->
-	<ItemGroup>
-		<MauiXaml Include="Resources\Styles\**\*.xaml" />
-	</ItemGroup>
-
-	<ItemGroup>
 	  <MauiXaml Update="View\MainPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

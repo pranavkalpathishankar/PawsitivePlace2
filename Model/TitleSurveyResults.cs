@@ -1,9 +1,10 @@
-namespace PawsitivePlace.Model;
-
-public class TitleSurveyResults : ContentPage
-{
-	public TitleSurveyResults()
+namespace PawsitivePlace.Model
+{ 
+	public class TitleSurveyResults
 	{
+		public TitleSurveyResults()
+		{
 		
+		}
 	}
 }

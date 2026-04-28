@@ -1,5 +1,4 @@
-namespace PawsitivePlace.View
-{
+namespace PawsitivePlace.View;
 
     public partial class MainPage
     {

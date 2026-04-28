@@ -1,10 +1,10 @@
 namespace PawsitivePlace.Model
 {
-	public class TitleAdopt
-	{
-		public TitleAdopt()
-		{
+    public class TitleAdopt
+    {
+        public TitleAdopt()
+        {
 
-		}
-	}
+        }
+    }
 }
