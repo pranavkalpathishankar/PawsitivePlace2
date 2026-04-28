@@ -1,8 +1,8 @@
 ﻿using System;
 
-public class Class1
+public class YerrabandiAbhinav
 {
-	public Class1()
-	{
-	}
+    public YerrabandiAbhinav()
+    {
+    }
 }
