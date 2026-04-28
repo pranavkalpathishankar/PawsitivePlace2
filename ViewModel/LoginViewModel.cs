@@ -1,9 +1,10 @@
-namespace PawsitivePlace.ViewModel;
-
-public class MainViewModel : ContentPage
+namespace PawsitivePlace.ViewModel
 {
-	public MainViewModel()
+	public class MainViewModel
 	{
+		public MainViewModel()
+		{
 		
+		}
 	}
 }

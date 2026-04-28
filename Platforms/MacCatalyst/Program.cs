@@ -1,7 +1,4 @@
-﻿using ObjCRuntime;
-using UIKit;
-
-namespace PawsitivePlace
+﻿namespace PawsitivePlace
 {
     public class Program
     {
