@@ -2,4 +2,10 @@
 using System.Collections.Generic;
 using System.Text;
 
-PawsitivePlace.Model.Temp
+namespace PawsitivePlace.Model.Temp
+{
+    internal class HunterBrown
+    {
+       
+    }
+}

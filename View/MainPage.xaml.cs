@@ -7,5 +7,4 @@ namespace PawsitivePlace.View
                 InitializeComponent();
             }
         }
-    }
-}
+ }
