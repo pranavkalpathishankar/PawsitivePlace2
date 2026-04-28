@@ -1,12 +1,10 @@
-using Microsoft.Maui.Controls;
+namespace PawsitivePlace.Model{
 
-namespace PawsitivePlace.Model;
-
-public class TitleLoginResults : ContentPage
-{
-	public TitleLoginResults()
+	public class TitleLoginResults 
 	{
-		
+		public TitleLoginResults()
+		{
+
 		}
 	}
 }
