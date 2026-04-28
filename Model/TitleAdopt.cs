@@ -1,9 +1,10 @@
-namespace PawsitivePlace.Model;
-
-public class TitleAdopt : ContentPage
+namespace PawsitivePlace.Model
 {
-	public TitleAdopt()
+	public class TitleAdopt
 	{
-		
+		public TitleAdopt()
+		{
+
+		}
 	}
 }

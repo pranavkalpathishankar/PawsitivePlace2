@@ -1,9 +1,11 @@
-namespace PawsitivePlace.Model;
-
-public class TitleRegister : ContentPage
+namespace PawsitivePlace.Model
 {
-	public TitleRegister()
+
+	public class TitleRegister
 	{
-		
+		public TitleRegister()
+		{
+
+		}
 	}
 }
