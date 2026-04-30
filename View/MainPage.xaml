@@ -4,10 +4,11 @@
              x:Class="PawsitivePlace.View.MainPage"
              Title="MainPage">
     <VerticalStackLayout>
-        <Label Text="Welcome to .NET MAUI!"
+        <Label Text="{Binding LoginText}"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
-        
+        <Entry Placeholder="{Binding UsernamePlaceHolder}"
+               TextColor="Black" />
     </VerticalStackLayout>
     
 </ContentPage>
