@@ -7,6 +7,7 @@ namespace PawsitivePlace.View
         public MainPage()
         {
             InitializeComponent();
+            BindingContext = new MainViewModel();
         }
     }
 }
