@@ -1,10 +1,11 @@
 namespace PawsitivePlace.View
-{
-        public partial class MainPage
+{ 
+    public partial class MainPage
+    {
+        public MainPage()
         {
-            public MainPage()
-            {
-                InitializeComponent();
-            }
+            InitializeComponent();
+            BindingContext = new MainViewModel();
         }
- }
+    }
+}
