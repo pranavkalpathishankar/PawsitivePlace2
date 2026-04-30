@@ -28,5 +28,4 @@
                         Style="{StaticResource TitleButton}"/>
         </Grid>
     </VerticalStackLayout>
-    
 </ContentPage>
