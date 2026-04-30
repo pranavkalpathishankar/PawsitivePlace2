@@ -14,9 +14,8 @@
         <Label Text="{Binding PasswordString}"
                VerticalOptions="Center" 
                HorizontalOptions="Center" />
-        
+
         <Entry WidthRequest="300"
                Placeholder="{Binding PasswordString}" />
-            
     </VerticalStackLayout>
 </ContentPage>
