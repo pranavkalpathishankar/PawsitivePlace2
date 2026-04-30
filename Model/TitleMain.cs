@@ -1,10 +1,9 @@
 namespace PawsitivePlace.Model
 {
-    public class TitleMain
+    public static class TitleMain
     {
-        public TitleMain()
-        {
-
-        }
+        public static string Title { get; set; } = "Login/Register Page";
+        public static string ButtonTextLogin { get; set; } = "Log-In";
+        public static string ButtonTextRegister { get; set; } = "Register";
     }
 }

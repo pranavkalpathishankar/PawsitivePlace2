@@ -2,14 +2,31 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PawsitivePlace.View.MainPage"
-             Title="MainPage">
-    
-    <VerticalStackLayout>
-        <Label Text="{Binding LoginText}"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-        <Entry Placeholder="{Binding UsernamePlaceHolder}"
-               TextColor="Black" />
+             Title="{Binding Title}">
+    <VerticalStackLayout Padding="30" Spacing="25">
+        <Grid ColumnSpacing="10" RowSpacing="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Button Grid.Row="0"
+                        Grid.Column="0"
+                        Grid.ColumnSpan="2"
+                        Text="{Binding ButtonTextLogin}"
+                        Command="{Binding LoginClickedCommand}"
+                        Style="{StaticResource TitleButton}"/>
+            <Button Grid.Row="1"
+                        Grid.Column="0"
+                        Grid.ColumnSpan="2"
+                        Text="{Binding ButtonTextRegister}"
+                        Command="{Binding RegisterClickedCommand}"
+                        Style="{StaticResource TitleButton}"/>
+        </Grid>
     </VerticalStackLayout>
     
 </ContentPage>
