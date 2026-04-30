@@ -1,10 +1,10 @@
-namespace PawsitivePlace.Model
-{
-	public class TitleLoginResults
+namespace PawsitivePlace.Model{
+
+	public class TitleLoginResults 
 	{
 		public TitleLoginResults()
 		{
-		
+
 		}
 	}
 }
