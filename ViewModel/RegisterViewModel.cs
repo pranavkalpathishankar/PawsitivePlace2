@@ -19,15 +19,12 @@ namespace PawsitivePlace.ViewModel
         [ObservableProperty]
         private string passwordConfirm = TitleRegister.PasswordConfirm;
 
+        [ObservableProperty]
+        private ImageSource registerButton = Buttons.RegisterButton;
+
         public RegisterViewModel()
         {
 
-        }
-
-        [RelayCommand]
-        private async Task LoginButtonClicked()
-        {
-            await Shell.Current.GoToAsync(nameof(LoginPage));
         }
 
         [RelayCommand]
@@ -36,13 +33,13 @@ namespace PawsitivePlace.ViewModel
             // Validation
             if (string.IsNullOrEmpty(userNameText) || string.IsNullOrEmpty(passwordText))
             {
-                await Shell.Current.DisplayAlert(Title, "Please fill in all fields", "OK");
+                await Shell.Current.DisplayAlertAsync(Title, "Please fill in all fields", "OK");
                 return;
             }
 
             if (passwordText != passwordConfirm)
             {
-                await Shell.Current.DisplayAlert(Title, "Passwords don't match", "OK");
+                await Shell.Current.DisplayAlertAsync(Title, "Passwords don't match", "OK");
                 return;
             }
 
@@ -51,13 +48,13 @@ namespace PawsitivePlace.ViewModel
 
             if (success)
             {
-                await Shell.Current.DisplayAlert("Success", "Account created successfully!", "OK");
+                await Shell.Current.DisplayAlertAsync("Success", "Account created successfully!", "OK");
                 // Navigate to login page or results page
                 await Shell.Current.GoToAsync($"/{nameof(LoginPage)}");
             }
             else
             {
-                await Shell.Current.DisplayAlert("Error", "Username already exists", "OK");
+                await Shell.Current.DisplayAlertAsync("Error", "Username already exists", "OK");
             }
 
         }

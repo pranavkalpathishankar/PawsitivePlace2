@@ -25,11 +25,10 @@
         <Entry WidthRequest="300"
                Placeholder="{Binding PasswordConfirm}" />
 
-        <ImageButton
-            Source="registerbutton.jpg"
-            Command="{Binding LoginButtonClickedCommand}"
+        <Button
+            ImageSource="{Binding RegisterButton}"
+            Command="{Binding RegisterCommand}"
             BackgroundColor="Transparent"
-            Aspect="AspectFit"
             BorderWidth="2" />
     </VerticalStackLayout>
 </ContentPage>
