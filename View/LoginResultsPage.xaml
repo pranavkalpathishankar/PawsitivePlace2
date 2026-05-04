@@ -2,8 +2,70 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PawsitivePlace.View.LoginResultsPage"
-             Title="{Binding Title}">
-    <VerticalStackLayout>
-        
-    </VerticalStackLayout>
+             Title= "{Binding Title}">
+    <ScrollView>
+        <Grid RowDefinitions="Auto, Auto, Auto, Auto, Auto"
+              ColumnDefinitions="*, *"
+              RowSpacing="30"
+              ColumnSpacing="10"
+              Padding="15">
+
+            <!-- Row 0: Horse and Cow -->
+            <VerticalStackLayout Grid.Row="0" Grid.Column="0" Spacing="5">
+                <Image Source="beautifulhorse.png" Aspect="AspectFit" HeightRequest="200" />
+                <Button ImageSource="{Binding AdoptButton}" Command="{Binding AdoptCommand}" CommandParameter="horse" WidthRequest="150" HeightRequest="100" BackgroundColor="Transparent"/>
+            </VerticalStackLayout>
+
+            <VerticalStackLayout Grid.Row="0" Grid.Column="1" Spacing="5">
+                <Image Source="beautifulcow.png" Aspect="AspectFit" HeightRequest="200" />
+                <Button ImageSource="{Binding AdoptButton}" Command="{Binding AdoptCommand}" CommandParameter="horse" WidthRequest="150" HeightRequest="100" BackgroundColor="Transparent"/>
+            </VerticalStackLayout>
+
+            <!-- Row 1: Cat and Dog -->
+            <VerticalStackLayout Grid.Row="1" Grid.Column="0" Spacing="5">
+                <Image Source="cat.png" Aspect="AspectFit" HeightRequest="200" />
+                <Button ImageSource="{Binding AdoptButton}" Command="{Binding AdoptCommand}" CommandParameter="horse" WidthRequest="150" HeightRequest="100" BackgroundColor="Transparent"/>
+            </VerticalStackLayout>
+
+            <VerticalStackLayout Grid.Row="1" Grid.Column="1" Spacing="5">
+                <Image Source="dog.png" Aspect="AspectFit" HeightRequest="200" />
+                <Button ImageSource="{Binding AdoptButton}" Command="{Binding AdoptCommand}" CommandParameter="horse" WidthRequest="150" HeightRequest="100" BackgroundColor="Transparent"/>
+            </VerticalStackLayout>
+
+            <!-- Row 2: Bunny and Macaw -->
+            <VerticalStackLayout Grid.Row="2" Grid.Column="0" Spacing="5">
+                <Image Source="bunny.png" Aspect="AspectFit" HeightRequest="200" />
+                <Button ImageSource="{Binding AdoptButton}" Command="{Binding AdoptCommand}" CommandParameter="horse" WidthRequest="150" HeightRequest="100" BackgroundColor="Transparent"/>
+            </VerticalStackLayout>
+
+            <VerticalStackLayout Grid.Row="2" Grid.Column="1" Spacing="5">
+                <Image Source="macaw.png" Aspect="AspectFit" HeightRequest="200" />
+                <Button ImageSource="{Binding AdoptButton}" Command="{Binding AdoptCommand}" CommandParameter="horse" WidthRequest="150" HeightRequest="100" BackgroundColor="Transparent"/>
+            </VerticalStackLayout>
+
+            <!-- Row 3: Deer and Elephant -->
+            <VerticalStackLayout Grid.Row="3" Grid.Column="0" Spacing="5">
+                <Image Source="deer.png" Aspect="AspectFit" HeightRequest="200" />
+                <Button ImageSource="{Binding AdoptButton}" Command="{Binding AdoptCommand}" CommandParameter="horse" WidthRequest="150" HeightRequest="100" BackgroundColor="Transparent"/>
+            </VerticalStackLayout>
+
+            <VerticalStackLayout Grid.Row="3" Grid.Column="1" Spacing="5">
+                <Image Source="elephant.png" Aspect="AspectFit" HeightRequest="200" />
+                <Button ImageSource="{Binding AdoptButton}" Command="{Binding AdoptCommand}" CommandParameter="horse" WidthRequest="150" HeightRequest="100" BackgroundColor="Transparent"/>
+            </VerticalStackLayout>
+
+            <!-- Row 4: Parrot and Hippo -->
+            <VerticalStackLayout Grid.Row="4" Grid.Column="0" Spacing="5">
+                <Image Source="parrot.png" Aspect="AspectFit" HeightRequest="200" />
+                <Button ImageSource="{Binding AdoptButton}" Command="{Binding AdoptCommand}" CommandParameter="horse" WidthRequest="150" HeightRequest="100" BackgroundColor="Transparent"/>
+            </VerticalStackLayout>
+
+            <VerticalStackLayout Grid.Row="4" Grid.Column="1" Spacing="5">
+                <Image Source="hippo.png" Aspect="AspectFit" HeightRequest="200" />
+                <Button ImageSource="{Binding AdoptButton}" Command="{Binding AdoptCommand}" CommandParameter="horse" WidthRequest="150" HeightRequest="100" BackgroundColor="Transparent"/>
+            </VerticalStackLayout>
+
+        </Grid>
+    </ScrollView>
+
 </ContentPage>
