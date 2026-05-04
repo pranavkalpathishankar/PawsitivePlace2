@@ -20,7 +20,7 @@
 
         <ImageButton
             Source="loginbutton.jpg"
-            BackgroundColor="Transparent"
+            BackgroundColor="White"
             Aspect="AspectFit"
             BorderWidth="2" />
     </VerticalStackLayout>
