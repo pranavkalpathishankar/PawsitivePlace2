@@ -23,5 +23,11 @@ namespace PawsitivePlace.ViewModel
 
         }
 
+        [RelayCommand]
+        private async Task LoginButtonClicked()
+        {
+            await Shell.Current.GoToAsync(nameof(LoginPage));
+        }
+
     }
 }

@@ -22,13 +22,5 @@ public partial class LoginPageViewModel : ObservableObject
 
     }
 
-    [RelayCommand]
-    private async Task SubmitClicked()
-    {
-        if(string.IsNullOrEmpty(userNameString) && string.IsNullOrEmpty(passwordString))
-        {
-            await App.Current.MainPage.DisplayAlert("null!","Cannot be null","continue");
-        }
-        await Shell.Current.GoToAsync(nameof(LoginResultsPage));
     }
 }
