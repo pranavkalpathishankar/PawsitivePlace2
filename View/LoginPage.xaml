@@ -17,5 +17,11 @@
 
         <Entry WidthRequest="300"
                Placeholder="{Binding PasswordString}" />
+
+        <ImageButton
+            Source="loginbutton.jpg"
+            BackgroundColor="Transparent"
+            Aspect="AspectFit"
+            BorderWidth="2" />
     </VerticalStackLayout>
 </ContentPage>

@@ -20,7 +20,5 @@ namespace PawsitivePlace.ViewModel
 
         }
 
-
-
     }
 }
