@@ -22,5 +22,4 @@ public partial class LoginPageViewModel : ObservableObject
 
     }
 
-    }
 }

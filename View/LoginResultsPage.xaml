@@ -2,8 +2,17 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PawsitivePlace.View.LoginResultsPage"
-             Title="{Binding Title}">
-    <VerticalStackLayout>
-        
-    </VerticalStackLayout>
+             Title= "{Binding Title}">
+    <ScrollView>
+        <Grid RowDefinitions="Auto, Auto, Auto, Auto, Auto"
+              ColumnDefinitions="*, *"
+              RowSpacing="30"
+              ColumnSpacing="10"
+              Padding="15">
+
+            
+
+        </Grid>
+    </ScrollView>
+
 </ContentPage>
