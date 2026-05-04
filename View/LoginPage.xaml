@@ -10,13 +10,18 @@
         
         <Entry WidthRequest="300"
                Placeholder="{Binding UserNameString}" />
-        
-        <Label Text="{Binding UserNameString}"
+
+        <Label Text="{Binding PasswordString}"
                VerticalOptions="Center" 
                HorizontalOptions="Center" />
-        
+
         <Entry WidthRequest="300"
-               Placeholder="{Binding UserNameString}" />
-            
+               Placeholder="{Binding PasswordString}" />
+
+        <ImageButton
+            Source="loginbutton.jpg"
+            BackgroundColor="Transparent"
+            Aspect="AspectFit"
+            BorderWidth="2" />
     </VerticalStackLayout>
 </ContentPage>
