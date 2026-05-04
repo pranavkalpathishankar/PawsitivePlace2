@@ -14,13 +14,8 @@
         <Label Text="{Binding PasswordString}"
                VerticalOptions="Center" 
                HorizontalOptions="Center" />
-        
+
         <Entry WidthRequest="300"
                Placeholder="{Binding PasswordString}" />
-
-        <ImageButton BackgroundColor="Transparent"
-                         Source="{Binding SubmitButton}"
-                         Command="{Binding SubmitClickedCommand}" />
-
     </VerticalStackLayout>
 </ContentPage>
