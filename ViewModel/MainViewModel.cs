@@ -10,10 +10,10 @@ namespace PawsitivePlace.ViewModel
 		public string Title => TitleMain.Title;
 
 		[ObservableProperty]
-		private string buttonTextLogin = TitleMain.ButtonTextLogin;
+		public string buttonTextLogin = TitleMain.ButtonTextLogin;
 
         [ObservableProperty]
-        private string buttonTextRegister = TitleMain.ButtonTextRegister;
+        public string buttonTextRegister = TitleMain.ButtonTextRegister;
 
         public MainViewModel()
         {

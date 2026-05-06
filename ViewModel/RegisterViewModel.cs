@@ -3,6 +3,7 @@ using CommunityToolkit.Mvvm.Input;
 using PawsitivePlace.Model.Entities;
 using PawsitivePlace.Model;
 using PawsitivePlace.View;
+using Microsoft.Extensions.Hosting;
 
 namespace PawsitivePlace.ViewModel
 {
@@ -31,20 +32,20 @@ namespace PawsitivePlace.ViewModel
         private async Task Register()
         {
             // Validation
-            if (string.IsNullOrEmpty(userNameText) || string.IsNullOrEmpty(passwordText))
+            if (string.IsNullOrWhiteSpace(UserNameText) || string.IsNullOrWhiteSpace(PasswordText))
             {
                 await Shell.Current.DisplayAlertAsync(Title, "Please fill in all fields", "OK");
                 return;
             }
 
-            if (passwordText != passwordConfirm)
+            if (PasswordText != PasswordConfirm)
             {
                 await Shell.Current.DisplayAlertAsync(Title, "Passwords don't match", "OK");
                 return;
             }
 
             // Try to add the user
-            bool success = Credentials.AddUser(userNameText, passwordText);
+            bool success = Credentials.AddUser(UserNameText, PasswordText);
 
             if (success)
             {

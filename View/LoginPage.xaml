@@ -3,25 +3,29 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PawsitivePlace.View.LoginPage"
              Title="{Binding Title}">
+
     <VerticalStackLayout>
-        <Label Text="{Binding UserNameString}"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-        
-        <Entry WidthRequest="300"
-               Placeholder="{Binding UserNameString}" />
 
-        <Label Text="{Binding PasswordString}"
-               VerticalOptions="Center" 
-               HorizontalOptions="Center" />
+        <Entry x:Name="EntryValue"
+               Text="{Binding UserNameText, Mode=TwoWay}"
+               PlaceholderColor="Blue"
+               Placeholder="Enter text here"
+               TextColor = "Black" 
+               WidthRequest="300"/>
 
-        <Entry WidthRequest="300"
-               Placeholder="{Binding PasswordString}" />
+        <Entry x:Name="EntryKey"
+               Text="{Binding PassText, Mode=TwoWay}"
+               PlaceholderColor="Blue"
+               Placeholder="Enter text here"
+               TextColor = "Black" 
+               WidthRequest="300"/>
 
-        <ImageButton
-            Source="loginbutton.jpg"
-            BackgroundColor="White"
-            Aspect="AspectFit"
-            BorderWidth="2" />
+
+        <Button HorizontalOptions="Center"
+                VerticalOptions="End"
+                BackgroundColor="Transparent"
+                ImageSource="{Binding SubmitButton}"
+                Command="{Binding SubmitCommand}"/>
+
     </VerticalStackLayout>
 </ContentPage>

@@ -4,31 +4,34 @@
              x:Class="PawsitivePlace.View.RegisterPage"
              Title="{Binding Title}">
     <VerticalStackLayout>
-        <Label Text="{Binding UserNameText}"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
 
-        <Entry WidthRequest="300"
-               Placeholder="{Binding UserNameText}" />
+        <Entry x:Name="EntryUserName"
+               PlaceholderColor="Blue"
+               Placeholder="Username"
+               Text="{Binding UserNameText, Mode=TwoWay}"
+               WidthRequest="300" />
 
-        <Label Text="{Binding PasswordText}"
-               VerticalOptions="Center" 
-               HorizontalOptions="Center" />
+        <Entry x:Name="EntryPassword"
+               PlaceholderColor="Blue"
+               Placeholder="Password"
+               Text="{Binding PasswordText, Mode=TwoWay}"
+               IsPassword="True"
+               TextColor="IndianRed"   
+               WidthRequest="300" />
 
-        <Entry WidthRequest="300"
-               Placeholder="{Binding PasswordText}" />
-
-        <Label Text="{Binding PasswordConfirm}"
-               VerticalOptions="Center" 
-               HorizontalOptions="Center" />
-
-        <Entry WidthRequest="300"
-               Placeholder="{Binding PasswordConfirm}" />
+        <Entry x:Name="EntryConfirmPassword"
+               PlaceholderColor="Blue"
+               Placeholder="Confirm Password"
+               Text="{Binding PasswordConfirm, Mode=TwoWay}"
+               IsPassword="True"
+               TextColor="IndianRed"   
+               WidthRequest="300" />
 
         <Button
             ImageSource="{Binding RegisterButton}"
             Command="{Binding RegisterCommand}"
             BackgroundColor="Transparent"
             BorderWidth="2" />
+        
     </VerticalStackLayout>
 </ContentPage>
