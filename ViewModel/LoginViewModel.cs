@@ -14,10 +14,10 @@ public partial class LoginViewModel : ObservableObject
     public string Title => TitleLogin.Title;
 
     [ObservableProperty]
-    private string userNameText = TitleLogin.UserNameText;
+    private string userNameText = string.Empty;
 
     [ObservableProperty]
-    private string passText = TitleLogin.PassText;
+    private string passText = string.Empty;
 
     public LoginViewModel()
     {

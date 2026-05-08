@@ -1,8 +1,8 @@
 namespace PawsitivePlace.View;
 
-public partial class Birds : ContentPage
+public partial class BirdPage : ContentPage
 {
-	public Birds()
+	public BirdPage()
 	{
 		InitializeComponent();
 	}

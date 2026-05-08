@@ -6,5 +6,7 @@ public partial class LoginResultsPage : ContentPage
 {
 	public LoginResultsPage()
 	{
+		InitializeComponent();
+		BindingContext = new LoginResultsViewModel();
 	}
 }

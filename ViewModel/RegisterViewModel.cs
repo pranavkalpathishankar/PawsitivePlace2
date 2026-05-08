@@ -12,13 +12,13 @@ namespace PawsitivePlace.ViewModel
         public string Title => TitleRegister.Title;
 
         [ObservableProperty]
-        private string userNameText = TitleRegister.UserNameText;
+        private string userNameText = string.Empty;
+        
+        [ObservableProperty]
+        private string passwordText = string.Empty;
 
         [ObservableProperty]
-        private string passwordText = TitleRegister.PasswordText;
-
-        [ObservableProperty]
-        private string passwordConfirm = TitleRegister.PasswordConfirm;
+        private string passwordConfirm = string.Empty;
 
         [ObservableProperty]
         private ImageSource registerButton = Buttons.RegisterButton;
