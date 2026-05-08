@@ -69,7 +69,7 @@
             <Button Grid.Row="4" Grid.Column="0" 
                     ImageSource="scarletmacaw.jpg" 
                     Command="{Binding AdoptCommand}" 
-                    CommandParameter="bird" 
+                    CommandParameter="bird"
                     BackgroundColor="Transparent" 
                     Padding="0"/>
 
