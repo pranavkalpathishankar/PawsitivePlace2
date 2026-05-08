@@ -9,14 +9,14 @@
         <Entry x:Name="EntryValue"
                Text="{Binding UserNameText, Mode=TwoWay}"
                PlaceholderColor="Blue"
-               Placeholder="Enter text here"
+               Placeholder="Username"
                TextColor = "Black" 
                WidthRequest="300"/>
 
         <Entry x:Name="EntryKey"
                Text="{Binding PassText, Mode=TwoWay}"
                PlaceholderColor="Blue"
-               Placeholder="Enter text here"
+               Placeholder="{Binding PassText}"
                TextColor = "Black" 
                WidthRequest="300"/>
 
