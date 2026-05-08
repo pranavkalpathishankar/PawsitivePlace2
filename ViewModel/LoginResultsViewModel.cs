@@ -20,6 +20,6 @@ public partial class LoginResultsViewModel : ObservableObject
     [RelayCommand]
     private async Task Adopt(string animalType)
     {
-        await Shell.Current.DisplayAlertAsync(Title, $"You adopted a {animalType}!", "OK");
+        await Shell.Current.GoToAsync($"/{nameof(AdoptionSuccessPage)}");
     }
 }

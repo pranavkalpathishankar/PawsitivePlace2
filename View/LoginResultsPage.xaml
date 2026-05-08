@@ -10,55 +10,23 @@
               ColumnSpacing="10"
               Padding="15">
 
-            <!-- Row 0: Horse and Cow -->
-            <VerticalStackLayout Grid.Row="0" Grid.Column="0" Spacing="5">
-                <Image Source="americancurl.jpg" Aspect="AspectFit" HeightRequest="200" />
-                <Button ImageSource="{Binding AdoptButton}" Command="{Binding AdoptCommand}" CommandParameter="cat" WidthRequest="150" HeightRequest="100" BackgroundColor="Transparent"/>
-            </VerticalStackLayout>
+            <Button Grid.Row="0" Grid.Column="0" ImageSource="americancurl.jpg" Command="{Binding AdoptCommand}" CommandParameter="cat" BackgroundColor="Transparent" Padding="0"/>
 
-            <VerticalStackLayout Grid.Row="0" Grid.Column="1" Spacing="5">
-                <Image Source="britishshorthair.jpg" Aspect="AspectFit" HeightRequest="200" />
-                <Button ImageSource="{Binding AdoptButton}" Command="{Binding AdoptCommand}" CommandParameter="cat" WidthRequest="150" HeightRequest="100" BackgroundColor="Transparent"/>
-            </VerticalStackLayout>
+            <Button Grid.Row="0" Grid.Column="1" ImageSource="britishshorthair.jpg" Command="{Binding AdoptCommand}" CommandParameter="cat" BackgroundColor="Transparent" Padding="0"/>
 
-            <!-- Row 1: Cat and Dog -->
-            <VerticalStackLayout Grid.Row="1" Grid.Column="0" Spacing="5">
-                <Image Source="burmese.jpg" Aspect="AspectFit" HeightRequest="200" />
-                <Button ImageSource="{Binding AdoptButton}" Command="{Binding AdoptCommand}" CommandParameter="cat" WidthRequest="150" HeightRequest="100" BackgroundColor="Transparent"/>
-            </VerticalStackLayout>
+            <Button Grid.Row="1" Grid.Column="0" ImageSource="burmese.jpg" Command="{Binding AdoptCommand}" CommandParameter="cat" BackgroundColor="Transparent" Padding="0"/>
 
-            <VerticalStackLayout Grid.Row="1" Grid.Column="1" Spacing="5">
-                <Image Source="finch.jpg" Aspect="AspectFit" HeightRequest="200" />
-                <Button ImageSource="{Binding AdoptButton}" Command="{Binding AdoptCommand}" CommandParameter="bird" WidthRequest="150" HeightRequest="100" BackgroundColor="Transparent"/>
-            </VerticalStackLayout>
+            <Button Grid.Row="1" Grid.Column="1" ImageSource="finch.jpg" Command="{Binding AdoptCommand}" CommandParameter="bird" BackgroundColor="Transparent" Padding="0"/>
 
-            <!-- Row 2: Bunny and Macaw -->
-            <VerticalStackLayout Grid.Row="2" Grid.Column="0" Spacing="5">
-                <Image Source="german_shepherd.png" Aspect="AspectFit" HeightRequest="200" />
-                <Button ImageSource="{Binding AdoptButton}" Command="{Binding AdoptCommand}" CommandParameter="dog" WidthRequest="150" HeightRequest="100" BackgroundColor="Transparent"/>
-            </VerticalStackLayout>
+            <Button Grid.Row="2" Grid.Column="0" ImageSource="german_shepherd.png" Command="{Binding AdoptCommand}" CommandParameter="dog" BackgroundColor="Transparent" Padding="0"/>
 
-            <VerticalStackLayout Grid.Row="2" Grid.Column="1" Spacing="5">
-                <Image Source="golden_retriever.jpg" Aspect="AspectFit" HeightRequest="200" />
-                <Button ImageSource="{Binding AdoptButton}" Command="{Binding AdoptCommand}" CommandParameter="dog" WidthRequest="150" HeightRequest="100" BackgroundColor="Transparent"/>
-            </VerticalStackLayout>
+            <Button Grid.Row="2" Grid.Column="1" ImageSource="golden_retriever.jpg" Command="{Binding AdoptCommand}" CommandParameter="dog" BackgroundColor="Transparent" Padding="0"/>
 
-            <!-- Row 3: Deer and Elephant -->
-            <VerticalStackLayout Grid.Row="3" Grid.Column="0" Spacing="5">
-                <Image Source="parakeet.jpg" Aspect="AspectFit" HeightRequest="200" />
-                <Button ImageSource="{Binding AdoptButton}" Command="{Binding AdoptCommand}" CommandParameter="bird" WidthRequest="150" HeightRequest="100" BackgroundColor="Transparent"/>
-            </VerticalStackLayout>
+            <Button Grid.Row="3" Grid.Column="0" ImageSource="parakeet.jpg" Command="{Binding AdoptCommand}" CommandParameter="bird" BackgroundColor="Transparent" Padding="0"/>
 
-            <VerticalStackLayout Grid.Row="3" Grid.Column="1" Spacing="5">
-                <Image Source="rottweiler.jpg" Aspect="AspectFit" HeightRequest="200" />
-                <Button ImageSource="{Binding AdoptButton}" Command="{Binding AdoptCommand}" CommandParameter="dog" WidthRequest="150" HeightRequest="100" BackgroundColor="Transparent"/>
-            </VerticalStackLayout>
+            <Button Grid.Row="3" Grid.Column="1" ImageSource="rottweiler.jpg" Command="{Binding AdoptCommand}" CommandParameter="dog" BackgroundColor="Transparent" Padding="0"/>
 
-            <!-- Row 4: Parrot and Hippo -->
-            <VerticalStackLayout Grid.Row="4" Grid.Column="0" Spacing="5">
-                <Image Source="scarletmacaw.jpg" Aspect="AspectFit" HeightRequest="200" />
-                <Button ImageSource="{Binding AdoptButton}" Command="{Binding AdoptCommand}" CommandParameter="bird" WidthRequest="150" HeightRequest="100" BackgroundColor="Transparent"/>
-            </VerticalStackLayout>
+            <Button Grid.Row="4" Grid.Column="0" ImageSource="scarletmacaw.jpg" Command="{Binding AdoptCommand}" CommandParameter="bird" BackgroundColor="Transparent" Padding="0"/>
 
         </Grid>
     </ScrollView>

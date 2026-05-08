@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PawsitivePlace.View.AdoptionSuccessPage"
+             Title="Success">
+    <VerticalStackLayout Spacing="20" Padding="20" VerticalOptions="Center" HorizontalOptions="Center">
+        <Image Source="checkmark.jpg" Aspect="AspectFit" HeightRequest="150" WidthRequest="150" HorizontalOptions="Center"/>
+        <Label Text="Success! You have adopted an animal!" FontSize="24" HorizontalOptions="Center" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
+        <Button Text="Back to Results" Command="{Binding BackCommand}" Padding="20"/>
+    </VerticalStackLayout>
+</ContentPage>
