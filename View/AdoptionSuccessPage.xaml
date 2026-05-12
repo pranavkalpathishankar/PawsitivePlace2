@@ -4,8 +4,28 @@
              x:Class="PawsitivePlace.View.AdoptionSuccessPage"
              Title="Success">
     <VerticalStackLayout Spacing="20" Padding="20" VerticalOptions="Center" HorizontalOptions="Center">
-        <Image Source="checkmark.jpg" Aspect="AspectFit" HeightRequest="150" WidthRequest="150" HorizontalOptions="Center"/>
-        <Label Text="Success! You have adopted an animal!" FontSize="24" HorizontalOptions="Center" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
-        <Button Text="Back to Results" Command="{Binding BackCommand}" Padding="20"/>
+        <Image Source="checkmark.jpg" 
+               Aspect="AspectFit" 
+               HeightRequest="150" 
+               WidthRequest="150" 
+               HorizontalOptions="Center"/>
+
+        <Label Text="Success! You have adopted an animal!" 
+               FontSize="24" 
+               HorizontalOptions="Center" 
+               FontAttributes="Bold" 
+               HorizontalTextAlignment="Center"/>
+        
+        <Button Text="Add to Cart" 
+                Command="{Binding AddToCartCommand}" 
+                BackgroundColor="#4CAF50"
+                TextColor="White"
+                Padding="20"/>
+        
+        <Button Text="Back to Results" 
+                Command="{Binding BackCommand}" 
+                BackgroundColor="#2196F3"
+                TextColor="White"
+                Padding="20"/>
     </VerticalStackLayout>
 </ContentPage>

@@ -3,7 +3,6 @@ using CommunityToolkit.Mvvm.Input;
 using PawsitivePlace.Model.Entities;
 using PawsitivePlace.Model;
 using PawsitivePlace.View;
-using Microsoft.Extensions.Hosting;
 
 namespace PawsitivePlace.ViewModel
 {

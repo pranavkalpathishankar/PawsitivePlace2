@@ -90,6 +90,9 @@
 	  <MauiXaml Update="View\BirdPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="View\CartPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="View\CatPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

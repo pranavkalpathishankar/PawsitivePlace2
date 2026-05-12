@@ -6,17 +6,15 @@
 
     <VerticalStackLayout>
 
-        <Entry x:Name="EntryValue"
-               Text="{Binding UserNameText, Mode=TwoWay}"
+        <Entry Text="{Binding UserNameText, Mode=TwoWay}"
                PlaceholderColor="Blue"
-               Placeholder="Username"
+               Placeholder="Username: "
                TextColor = "Black" 
                WidthRequest="300"/>
 
-        <Entry x:Name="EntryKey"
-               Text="{Binding PassText, Mode=TwoWay}"
+        <Entry Text="{Binding PassText, Mode=TwoWay}"
                PlaceholderColor="Blue"
-               Placeholder="{Binding PassText}"
+               Placeholder="Password: "
                TextColor = "Black" 
                WidthRequest="300"/>
 

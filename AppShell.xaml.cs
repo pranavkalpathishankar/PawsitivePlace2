@@ -17,6 +17,7 @@ namespace PawsitivePlace
             Routing.RegisterRoute(nameof(RegisterPage), typeof(RegisterPage));
             Routing.RegisterRoute(nameof(LoginResultsPage), typeof(LoginResultsPage));
             Routing.RegisterRoute(nameof(AdoptionSuccessPage), typeof(AdoptionSuccessPage));
+            Routing.RegisterRoute(nameof(CartPage), typeof(CartPage));
         }
 
     }
