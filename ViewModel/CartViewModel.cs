@@ -20,21 +20,24 @@ namespace PawsitivePlace.ViewModel
 
         private void LoadCartItems()
         {
-            CartItems = CartService.GetCartItems();
+            CartItems = new List<CartItem>(CartService.GetCartItems());
         }
 
         [RelayCommand]
-        private async Task RemoveItem(CartItem item)
+        private void RemoveItem(CartItem item)
         {
-            CartService.RemoveFromCart(item);
-            LoadCartItems();
-            OnPropertyChanged(nameof(CartItems));
+            if (item != null)
+            {
+                CartService.RemoveFromCart(item);
+                LoadCartItems();
+                OnPropertyChanged(nameof(CartItems));
+            }
         }
 
         [RelayCommand]
         private async Task Back()
         {
-            await Shell.Current.GoToAsync("..");
+            await Shell.Current.GoToAsync($"/{nameof(LoginResultsPage)}");
         }
 
         [RelayCommand]
@@ -43,6 +46,7 @@ namespace PawsitivePlace.ViewModel
             await Shell.Current.DisplayAlertAsync(Title, "Order placed successfully!", "OK");
             CartService.ClearCart();
             LoadCartItems();
+            OnPropertyChanged(nameof(CartItems));
             await Shell.Current.GoToAsync($"/{nameof(LoginResultsPage)}");
         }
     }

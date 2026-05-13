@@ -32,7 +32,7 @@ public partial class AdoptionSuccessViewModel : ObservableObject
     [RelayCommand]
     private async Task Back()
     {
-        await Shell.Current.GoToAsync("..");
+        await Shell.Current.GoToAsync($"/{nameof(LoginResultsPage)}");
     }
 
     [RelayCommand]

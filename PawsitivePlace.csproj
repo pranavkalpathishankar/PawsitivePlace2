@@ -84,6 +84,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="Resources\Styles\Styles.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="View\AdoptionSuccessPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
