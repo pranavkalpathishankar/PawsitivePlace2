@@ -8,12 +8,13 @@ namespace PawsitivePlace.Model.Services
 
         public static List<CartItem> GetCartItems() => _cartItems;
 
-        public static void AddToCart(string animalType, string animalName, string imageSource)
+        public static void AddToCart(string animalType, string arrivalDate, string animalName, string imageSource)
         {
             var cartItem = new CartItem
             {
                 AnimalType = animalType,
                 AnimalName = animalName,
+                arrival = arrivalDate,
                 ImageSource = imageSource
             };
             _cartItems.Add(cartItem);

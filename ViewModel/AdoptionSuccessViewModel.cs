@@ -14,6 +14,9 @@ public partial class AdoptionSuccessViewModel : ObservableObject
     private string animalName;
 
     [ObservableProperty]
+    private string arrival;
+
+    [ObservableProperty]
     private string imageSource;
 
     public string Title => "Success";
@@ -22,10 +25,11 @@ public partial class AdoptionSuccessViewModel : ObservableObject
     {
     }
 
-    public void Initialize(string type, string name, string image)
+    public void Initialize(string type, string arrivalDate, string name, string image)
     {
         AnimalType = type;
         AnimalName = name;
+        arrival = arrivalDate;
         ImageSource = image;
     }
 
@@ -38,7 +42,7 @@ public partial class AdoptionSuccessViewModel : ObservableObject
     [RelayCommand]
     private async Task AddToCart()
     {
-        CartService.AddToCart(AnimalType, AnimalName, ImageSource);
+        CartService.AddToCart(AnimalType, arrival, AnimalName, ImageSource);
         await Shell.Current.DisplayAlertAsync(Title, $"{AnimalName} added to cart!", "OK");
         await Shell.Current.GoToAsync($"/{nameof(CartPage)}");
     }

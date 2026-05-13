@@ -19,7 +19,7 @@ public partial class AdoptionSuccessPage : ContentPage
         {
             var animal = LoginResultsViewModel.SelectedAnimal.Value;
             var vm = (AdoptionSuccessViewModel)BindingContext;
-            vm.Initialize(animal.type, animal.name, animal.image);
+            vm.Initialize(animal.type, animal.dateOfarrival, animal.name, animal.image);
         }
     }
 }

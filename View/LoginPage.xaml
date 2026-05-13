@@ -9,15 +9,15 @@
         <Entry Text="{Binding UserNameText, Mode=TwoWay}"
                PlaceholderColor="Blue"
                Placeholder="Username: "
-               TextColor = "Black" 
+               TextColor="Black" 
                WidthRequest="300"/>
 
         <Entry Text="{Binding PassText, Mode=TwoWay}"
                PlaceholderColor="Blue"
                Placeholder="Password: "
-               TextColor = "Black" 
+               TextColor="Black"
+               IsPassword="True"
                WidthRequest="300"/>
-
 
         <Button HorizontalOptions="Center"
                 VerticalOptions="End"

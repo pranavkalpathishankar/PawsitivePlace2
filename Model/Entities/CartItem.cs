@@ -7,5 +7,6 @@ namespace PawsitivePlace.Model.Entities
         public string AnimalName { get; set; }
         public string ImageSource { get; set; }
         public DateTime AddedAt { get; set; } = DateTime.UtcNow;
+        public string arrival { get; set; }
     }
 }

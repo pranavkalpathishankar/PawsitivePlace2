@@ -23,6 +23,11 @@ namespace PawsitivePlace.ViewModel
             CartItems = new List<CartItem>(CartService.GetCartItems());
         }
 
+        public void RefreshCart()
+        {
+            LoadCartItems();
+        }
+
         [RelayCommand]
         private void RemoveItem(CartItem item)
         {
@@ -43,7 +48,16 @@ namespace PawsitivePlace.ViewModel
         [RelayCommand]
         private async Task Checkout()
         {
-            await Shell.Current.DisplayAlertAsync(Title, "Order placed successfully!", "OK");
+            if (CartItems == null || CartItems.Count == 0)
+            {
+                await Shell.Current.DisplayAlertAsync(Title, "Your cart is empty!", "OK");
+                return;
+            }
+
+            // Display order confirmation with total items and arrival dates
+            string itemsList = string.Join("\n", CartItems.Select(item => $"• {item.AnimalName} (Arrives in: {item.arrival})"));
+            await Shell.Current.DisplayAlertAsync(Title, $"Order placed successfully!\nItems:\n{itemsList}", "OK");
+
             CartService.ClearCart();
             LoadCartItems();
             OnPropertyChanged(nameof(CartItems));

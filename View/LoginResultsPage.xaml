@@ -2,65 +2,78 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PawsitivePlace.View.LoginResultsPage"
-             Title= "{Binding Title}">
-    <ScrollView>
-        <Grid RowDefinitions="Auto, Auto, Auto, Auto, Auto"
-              ColumnDefinitions="*, *"
-              RowSpacing="20"
-              ColumnSpacing="10"
-              Padding="15">
+             Title="{Binding Title}">
+    <VerticalStackLayout Spacing="10">
 
-            <!-- Row 0: Cat Breeds -->
-            <VerticalStackLayout Grid.Row="0" Grid.Column="0" Spacing="10" HorizontalOptions="Center">
-                <Image Source="americancurl.jpg" Aspect="AspectFit" HeightRequest="150"/>
-                <Button ImageSource="adoptbutton.jpg" Command="{Binding AdoptCommand}" CommandParameter="americancurl" BackgroundColor="Transparent" BorderWidth="0" Padding="0" WidthRequest="150" HeightRequest="60"/>
-            </VerticalStackLayout>
+        <!-- Filter Buttons -->
+        <HorizontalStackLayout Padding="15,10" Spacing="8" HorizontalOptions="CenterAndExpand">
+            <Button Text="All" 
+                    Command="{Binding FilterByCategoryCommand}" 
+                    CommandParameter="All"
+                    BackgroundColor="#F4A460"
+                    TextColor="White"
+                    CornerRadius="8"
+                    Padding="12,8"
+                    FontSize="12"/>
 
-            <VerticalStackLayout Grid.Row="0" Grid.Column="1" Spacing="10" HorizontalOptions="Center">
-                <Image Source="britishshorthair.jpg" Aspect="AspectFit" HeightRequest="150"/>
-                <Button ImageSource="adoptbutton.jpg" Command="{Binding AdoptCommand}" CommandParameter="britishshorthair" BackgroundColor="Transparent" BorderWidth="0" Padding="0" WidthRequest="150" HeightRequest="60"/>
-            </VerticalStackLayout>
+            <Button Text="🐱 Cats" 
+                    Command="{Binding FilterByCategoryCommand}" 
+                    CommandParameter="cat"
+                    BackgroundColor="#2E7D9E"
+                    TextColor="White"
+                    CornerRadius="8"
+                    Padding="12,8"
+                    FontSize="12"/>
 
-            <!-- Row 1: Cat and Bird -->
-            <VerticalStackLayout Grid.Row="1" Grid.Column="0" Spacing="10" HorizontalOptions="Center">
-                <Image Source="burmese.jpg" Aspect="AspectFit" HeightRequest="150"/>
-                <Button ImageSource="adoptbutton.jpg" Command="{Binding AdoptCommand}" CommandParameter="burmese" BackgroundColor="Transparent" BorderWidth="0" Padding="0" WidthRequest="150" HeightRequest="60"/>
-            </VerticalStackLayout>
+            <Button Text="🐕 Dogs" 
+                    Command="{Binding FilterByCategoryCommand}" 
+                    CommandParameter="dog"
+                    BackgroundColor="#FF9844"
+                    TextColor="White"
+                    CornerRadius="8"
+                    Padding="12,8"
+                    FontSize="12"/>
 
-            <VerticalStackLayout Grid.Row="1" Grid.Column="1" Spacing="10" HorizontalOptions="Center">
-                <Image Source="finch.jpg" Aspect="AspectFit" HeightRequest="150"/>
-                <Button ImageSource="adoptbutton.jpg" Command="{Binding AdoptCommand}" CommandParameter="finch" BackgroundColor="Transparent" BorderWidth="0" Padding="0" WidthRequest="150" HeightRequest="60"/>
-            </VerticalStackLayout>
+            <Button Text="🐦 Birds" 
+                    Command="{Binding FilterByCategoryCommand}" 
+                    CommandParameter="bird"
+                    BackgroundColor="#4FA3C6"
+                    TextColor="White"
+                    CornerRadius="8"
+                    Padding="12,8"
+                    FontSize="12"/>
+        </HorizontalStackLayout>
 
-            <!-- Row 2: Dogs -->
-            <VerticalStackLayout Grid.Row="2" Grid.Column="0" Spacing="10" HorizontalOptions="Center">
-                <Image Source="german_shepherd.png" Aspect="AspectFit" HeightRequest="150"/>
-                <Button ImageSource="adoptbutton.jpg" Command="{Binding AdoptCommand}" CommandParameter="german_shepherd" BackgroundColor="Transparent" BorderWidth="0" Padding="0" WidthRequest="150" HeightRequest="60"/>
-            </VerticalStackLayout>
+        <!-- Selected Filter Display -->
+        <Label Text="{Binding SelectedFilter, StringFormat='Filter: {0}'}"
+               HorizontalOptions="Center"
+               FontSize="14"
+               FontAttributes="Bold"
+               TextColor="#2C2520"
+               Margin="0,5,0,10"/>
 
-            <VerticalStackLayout Grid.Row="2" Grid.Column="1" Spacing="10" HorizontalOptions="Center">
-                <Image Source="golden_retriever.jpg" Aspect="AspectFit" HeightRequest="150"/>
-                <Button ImageSource="adoptbutton.jpg" Command="{Binding AdoptCommand}" CommandParameter="golden_retriever" BackgroundColor="Transparent" BorderWidth="0" Padding="0" WidthRequest="150" HeightRequest="60"/>
-            </VerticalStackLayout>
+        <!-- Animals Grid using CollectionView -->
+        <CollectionView ItemsSource="{Binding FilteredAnimalsGrid}" SelectionMode="None">
+            <CollectionView.ItemsLayout>
+                <GridItemsLayout Orientation="Vertical" HorizontalItemSpacing="10" VerticalItemSpacing="20" />
+            </CollectionView.ItemsLayout>
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <VerticalStackLayout Spacing="10" Padding="5" WidthRequest="150">
+                        <Image Source="{Binding imageFile}" Aspect="AspectFit" HeightRequest="150" WidthRequest="150"/>
+                        <Button ImageSource="adoptbutton.jpg" 
+                                Command="{Binding Source={RelativeSource AncestorType={x:Type ContentPage}}, Path=BindingContext.AdoptCommand}" 
+                                CommandParameter="{Binding animalKey}"
+                                BackgroundColor="Transparent" 
+                                BorderWidth="0" 
+                                Padding="0" 
+                                WidthRequest="150" 
+                                HeightRequest="60"/>
+                    </VerticalStackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
 
-            <!-- Row 3: Bird and Dog -->
-            <VerticalStackLayout Grid.Row="3" Grid.Column="0" Spacing="10" HorizontalOptions="Center">
-                <Image Source="parakeet.jpg" Aspect="AspectFit" HeightRequest="150"/>
-                <Button ImageSource="adoptbutton.jpg" Command="{Binding AdoptCommand}" CommandParameter="parakeet" BackgroundColor="Transparent" BorderWidth="0" Padding="0" WidthRequest="150" HeightRequest="60"/>
-            </VerticalStackLayout>
-
-            <VerticalStackLayout Grid.Row="3" Grid.Column="1" Spacing="10" HorizontalOptions="Center">
-                <Image Source="rottweiler.jpg" Aspect="AspectFit" HeightRequest="150"/>
-                <Button ImageSource="adoptbutton.jpg" Command="{Binding AdoptCommand}" CommandParameter="rottweiler" BackgroundColor="Transparent" BorderWidth="0" Padding="0" WidthRequest="150" HeightRequest="60"/>
-            </VerticalStackLayout>
-
-            <!-- Row 4: Bird -->
-            <VerticalStackLayout Grid.Row="4" Grid.Column="0" Spacing="10" HorizontalOptions="Center">
-                <Image Source="scarletmacaw.jpg" Aspect="AspectFit" HeightRequest="150"/>
-                <Button ImageSource="adoptbutton.jpg" Command="{Binding AdoptCommand}" CommandParameter="scarletmacaw" BackgroundColor="Transparent" BorderWidth="0" Padding="0" WidthRequest="150" HeightRequest="60"/>
-            </VerticalStackLayout>
-
-        </Grid>
-    </ScrollView>
+    </VerticalStackLayout>
 
 </ContentPage>
