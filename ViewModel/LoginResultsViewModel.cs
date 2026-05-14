@@ -67,25 +67,25 @@ public partial class LoginResultsViewModel : ObservableObject
     {
         FilteredAnimalsGrid.Clear();
 
-        List<string> animalKeys;
-        if (category == "All")
+        List<string> animalKeys = new List<string>();
+
+        if (category.Equals("All", StringComparison.OrdinalIgnoreCase))
         {
-            animalKeys = new List<string> 
+            // Show all animals
+            animalKeys.AddRange(new[] 
             { 
                 "americancurl", "britishshorthair", "burmese", 
                 "finch", "german_shepherd", "golden_retriever", 
                 "parakeet", "rottweiler", "scarletmacaw" 
-            };
+            });
         }
         else if (animalsByCategory.TryGetValue(category.ToLower(), out var categoryAnimals))
         {
-            animalKeys = categoryAnimals;
-        }
-        else
-        {
-            return;
+            // Show animals from specific category
+            animalKeys.AddRange(categoryAnimals);
         }
 
+        // Populate the grid
         foreach (var animalKey in animalKeys)
         {
             if (animals.TryGetValue(animalKey, out var animal))
@@ -117,7 +117,7 @@ public partial class LoginResultsViewModel : ObservableObject
             "americancurl" or "britishshorthair" or "burmese" => "cat",
             "finch" or "parakeet" or "scarletmacaw" => "bird",
             "german_shepherd" or "golden_retriever" or "rottweiler" => "dog",
-            
+           
         };
     }
 }

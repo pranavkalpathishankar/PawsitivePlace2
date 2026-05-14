@@ -2,77 +2,125 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PawsitivePlace.View.LoginResultsPage"
-             Title="{Binding Title}">
-    <VerticalStackLayout Spacing="10">
+             Title="{Binding Title}"
+             BackgroundColor="#FEFCF8">
 
-        <!-- Filter Buttons -->
-        <HorizontalStackLayout Padding="15,10" Spacing="8" HorizontalOptions="CenterAndExpand">
-            <Button Text="All" 
-                    Command="{Binding FilterByCategoryCommand}" 
-                    CommandParameter="All"
-                    BackgroundColor="#F4A460"
-                    TextColor="White"
-                    CornerRadius="8"
-                    Padding="12,8"
-                    FontSize="12"/>
+    <VerticalStackLayout Spacing="0">
 
-            <Button Text="🐱 Cats" 
-                    Command="{Binding FilterByCategoryCommand}" 
-                    CommandParameter="cat"
-                    BackgroundColor="#2E7D9E"
-                    TextColor="White"
-                    CornerRadius="8"
-                    Padding="12,8"
-                    FontSize="12"/>
+        <!-- Header with Filter Title -->
+        <VerticalStackLayout Padding="20,15" BackgroundColor="#F4A460" Spacing="10">
+            <Label Text="Find Your Perfect Pet" 
+                   FontSize="24" 
+                   FontAttributes="Bold" 
+                   TextColor="White"
+                   HorizontalOptions="Center"/>
+        </VerticalStackLayout>
 
-            <Button Text="🐕 Dogs" 
-                    Command="{Binding FilterByCategoryCommand}" 
-                    CommandParameter="dog"
-                    BackgroundColor="#FF9844"
-                    TextColor="White"
-                    CornerRadius="8"
-                    Padding="12,8"
-                    FontSize="12"/>
+        <!-- Filter Buttons Section -->
+        <VerticalStackLayout Padding="15,15" Spacing="10" BackgroundColor="#F5EFE7">
+            <Label Text="Filter by Category" 
+                   FontSize="14" 
+                   FontAttributes="Bold" 
+                   TextColor="#2C2520"
+                   Margin="0,0,0,5"/>
 
-            <Button Text="🐦 Birds" 
-                    Command="{Binding FilterByCategoryCommand}" 
-                    CommandParameter="bird"
-                    BackgroundColor="#4FA3C6"
-                    TextColor="White"
-                    CornerRadius="8"
-                    Padding="12,8"
-                    FontSize="12"/>
-        </HorizontalStackLayout>
+            <HorizontalStackLayout Spacing="8" HorizontalOptions="CenterAndExpand">
+                <Button Text="All" 
+                        Command="{Binding FilterByCategoryCommand}" 
+                        CommandParameter="All"
+                        BackgroundColor="#F4A460"
+                        TextColor="White"
+                        CornerRadius="8"
+                        Padding="12,8"
+                        FontSize="12"
+                        FontAttributes="Bold"/>
 
-        <!-- Selected Filter Display -->
-        <Label Text="{Binding SelectedFilter, StringFormat='Filter: {0}'}"
-               HorizontalOptions="Center"
-               FontSize="14"
-               FontAttributes="Bold"
-               TextColor="#2C2520"
-               Margin="0,5,0,10"/>
+                <Button Text="🐱 Cats" 
+                        Command="{Binding FilterByCategoryCommand}" 
+                        CommandParameter="cat"
+                        BackgroundColor="#2E7D9E"
+                        TextColor="White"
+                        CornerRadius="8"
+                        Padding="12,8"
+                        FontSize="12"
+                        FontAttributes="Bold"/>
 
-        <!-- Animals Grid using CollectionView -->
-        <CollectionView ItemsSource="{Binding FilteredAnimalsGrid}" SelectionMode="None">
-            <CollectionView.ItemsLayout>
-                <GridItemsLayout Orientation="Vertical" HorizontalItemSpacing="10" VerticalItemSpacing="20" />
-            </CollectionView.ItemsLayout>
-            <CollectionView.ItemTemplate>
-                <DataTemplate>
-                    <VerticalStackLayout Spacing="10" Padding="5" WidthRequest="150">
-                        <Image Source="{Binding imageFile}" Aspect="AspectFit" HeightRequest="150" WidthRequest="150"/>
-                        <Button ImageSource="adoptbutton.jpg" 
-                                Command="{Binding Source={RelativeSource AncestorType={x:Type ContentPage}}, Path=BindingContext.AdoptCommand}" 
-                                CommandParameter="{Binding animalKey}"
-                                BackgroundColor="Transparent" 
-                                BorderWidth="0" 
-                                Padding="0" 
-                                WidthRequest="150" 
-                                HeightRequest="60"/>
-                    </VerticalStackLayout>
-                </DataTemplate>
-            </CollectionView.ItemTemplate>
-        </CollectionView>
+                <Button Text="🐕 Dogs" 
+                        Command="{Binding FilterByCategoryCommand}" 
+                        CommandParameter="dog"
+                        BackgroundColor="#FF9844"
+                        TextColor="White"
+                        CornerRadius="8"
+                        Padding="12,8"
+                        FontSize="12"
+                        FontAttributes="Bold"/>
+
+                <Button Text="🐦 Birds" 
+                        Command="{Binding FilterByCategoryCommand}" 
+                        CommandParameter="bird"
+                        BackgroundColor="#4FA3C6"
+                        TextColor="White"
+                        CornerRadius="8"
+                        Padding="12,8"
+                        FontSize="12"
+                        FontAttributes="Bold"/>
+            </HorizontalStackLayout>
+
+            <!-- Selected Filter Display -->
+            <Label Text="{Binding SelectedFilter, StringFormat='Currently showing: {0}'}"
+                   HorizontalOptions="Center"
+                   FontSize="12"
+                   FontAttributes="Italic"
+                   TextColor="#7A7470"
+                   Margin="0,5,0,0"/>
+        </VerticalStackLayout>
+
+        <!-- Animals Grid Section -->
+        <ScrollView VerticalOptions="FillAndExpand">
+            <VerticalStackLayout Padding="15" Spacing="15">
+                <CollectionView ItemsSource="{Binding FilteredAnimalsGrid}" SelectionMode="None">
+                    <CollectionView.ItemsLayout>
+                        <GridItemsLayout Orientation="Horizontal" 
+                                       HorizontalItemSpacing="12" 
+                                       VerticalItemSpacing="15" />
+                    </CollectionView.ItemsLayout>
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Border StrokeThickness="0" 
+                                   Padding="8"
+                                   StrokeShape="RoundRectangle 12"
+                                   BackgroundColor="White"
+                                   WidthRequest="170">
+                                <VerticalStackLayout Spacing="8">
+
+                                    <!-- Image with border -->
+                                    <Border StrokeThickness="1" 
+                                           Stroke="#E8E3DE"
+                                           StrokeShape="RoundRectangle 10"
+                                           Padding="8">
+                                        <Image Source="{Binding imageFile}" 
+                                               Aspect="AspectFill" 
+                                               HeightRequest="140" 
+                                               WidthRequest="154"/>
+                                    </Border>
+
+                                    <!-- Adopt Button -->
+                                    <Button ImageSource="adoptbutton.jpg" 
+                                            Command="{Binding Source={RelativeSource AncestorType={x:Type ContentPage}}, Path=BindingContext.AdoptCommand}" 
+                                            CommandParameter="{Binding animalKey}"
+                                            BackgroundColor="Transparent" 
+                                            BorderWidth="0" 
+                                            Padding="0" 
+                                            WidthRequest="154" 
+                                            HeightRequest="50"
+                                            HorizontalOptions="Center"/>
+                                </VerticalStackLayout>
+                            </Border>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </VerticalStackLayout>
+        </ScrollView>
 
     </VerticalStackLayout>
 

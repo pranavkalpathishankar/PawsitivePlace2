@@ -30,7 +30,7 @@
             </CollectionView.ItemTemplate>
         </CollectionView>
 
-        <VerticalStackLayout Spacing="10" VerticalOptions="EndAndExpand">
+        <VerticalStackLayout Spacing="10" VerticalOptions="End">
             <Label Text="{Binding CartItems.Count, StringFormat='Total Items: {0}'}" FontSize="16" FontAttributes="Bold" HorizontalOptions="Center"/>
 
             <Button Text="Checkout" 
